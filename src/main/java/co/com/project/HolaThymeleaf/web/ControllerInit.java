@@ -3,8 +3,6 @@ package co.com.project.HolaThymeleaf.web;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -23,7 +21,7 @@ public class ControllerInit {
     private PersonaService personaService;
       
     @GetMapping("/inicio")
-    public String inicio(Model model, @AuthenticationPrincipal User user){
+    public String inicio(Model model){
         
         var personas = personaService.listarPersonas();
         model.addAttribute("personas", personas);

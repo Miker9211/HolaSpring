@@ -3,7 +3,6 @@ package co.com.project.HolaThymeleaf.domain;
 import java.io.Serializable;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
 
 
 @Entity
@@ -17,16 +16,12 @@ public class Persona implements Serializable{
     @Column(name = "id_persona")
     private Long idPersona;
 
-    @NotEmpty
     @Column(name = "nombre")
     private String name;
 
-    @NotEmpty
     @Column(name = "apellido")
     private String lastName;
 
-    @NotEmpty
-    @Email
     private String email;
 
     @Column(name = "telefono")
@@ -124,10 +119,4 @@ public class Persona implements Serializable{
             return false;
         return true;
     }
-
-    
-    
-
-    
-
 }

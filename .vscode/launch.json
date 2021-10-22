@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch EncriptarPassword",
+            "request": "launch",
+            "mainClass": "co.com.project.HolaThymeleaf.util.EncriptarPassword",
+            "projectName": "HolaSpring"
+        },
+        {
+            "type": "java",
             "name": "Launch HolaSpringApplication",
             "request": "launch",
             "mainClass": "co.com.project.HolaThymeleaf.HolaSpringApplication",
