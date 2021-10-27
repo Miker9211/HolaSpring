@@ -27,6 +27,9 @@ public class Persona implements Serializable{
     @Column(name = "telefono")
     private String phone;
 
+    @Column(name = "saldo", nullable = true)
+    private Double saldo;
+
     public Persona (){
 
     }
@@ -71,6 +74,14 @@ public class Persona implements Serializable{
         this.phone = phone;
     }
 
+    public Double getSaldo(){
+        return saldo;
+    }
+
+    public void setSaldo(Double saldo){
+        this.saldo = saldo;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -80,6 +91,7 @@ public class Persona implements Serializable{
         result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
         result = prime * result + ((name == null) ? 0 : name.hashCode());
         result = prime * result + ((phone == null) ? 0 : phone.hashCode());
+        result = prime * result + ((saldo == null) ? 0 : saldo.hashCode());
         return result;
     }
 
@@ -117,6 +129,13 @@ public class Persona implements Serializable{
                 return false;
         } else if (!phone.equals(other.phone))
             return false;
+        if (saldo == null) {
+            if (other.saldo != null)
+                return false;
+        } else if (!saldo.equals(other.saldo))
+            return false;
         return true;
     }
+
+    
 }
