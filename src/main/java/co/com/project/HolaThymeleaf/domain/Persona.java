@@ -27,7 +27,7 @@ public class Persona implements Serializable{
     @Column(name = "telefono")
     private String phone;
 
-    @Column(name = "saldo", nullable = true)
+    @Column(name = "saldo")
     private Double saldo;
 
     public Persona (){
